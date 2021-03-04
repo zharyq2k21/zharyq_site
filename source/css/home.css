@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* 
+    - Reset 
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #393e46;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header.navbar ul.navbar-menu{
+    display: none;
+}
+header.mobile__navbar{
+    display: none;
+}
+
+
+/* 
+    - Desktop Navbar
+*/
+header.navbar {
+    background: #222831;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 280px;
+}
+
+/* Логотип */
+header.navbar ul.navbar-logo{
+    font-size: 28px;
+    text-transform: uppercase;
+}
+header.navbar ul.navbar-logo li{
+    color: #EEEEEE; 
+    font-weight: 600;
+}
+header.navbar ul.navbar-logo li span{
+    color: #00adb5;
+    font-weight: 600;
+}
+
+/* Навигация */
+header.navbar ul.navbar-items{
+    display: flex;
+}
+header.navbar ul.navbar-items li a.item{
+    color: #EEEEEE;
+    font-size: 20px;
+    margin: 0 8px;
+}
+header.navbar ul.navbar-items li a.item:hover{
+    border-bottom: 1px solid #EEEEEE;
+}
+
+/* Кнопка авторизаций */
+header.navbar ul.navbar-login li a.login{
+    background: #00adb5;
+    color: #eee;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #00acb562;
+    padding: 4px 12px;
+}
+header.navbar ul.navbar-login li a.login:active{
+    margin: 3px 0 0 0;
+    box-shadow: none;
+}
+header.navbar ul.navbar-login li:active{
+    margin: 3px 0 0 0;
+}
+
+
+/*  
+    - Content 
+*/
+main.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+main.content div.content-title{
+    color: #393e46;
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+main.content table.content-posts tr{
+    display: flex;
+    margin: 20px 0;
+}
+main.content table.content-posts tr td.card{
+    margin: 0 15px;
+    background: #222831;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #393e4649;
+    border-radius: 15px;
+
+}
+main.content table.content-posts tr img.card-image{
+    width: 370px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+main.content table.content-posts tr td.card p.card-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: #eee;
+    margin: 5px 0 10px 0;
+}
+main.content table.content-posts tr td.card a.card-button{
+    width: 100%;
+    text-transform: uppercase;
+    padding: 5px 0;
+    text-align: center;
+    background: #00adb5;
+    color: #eee;
+    font-weight: 500;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+/* 
+    - Footer
+*/
+footer.footer{
+    background: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 190px;
+}
+footer.footer section.footer__links-items{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+footer.footer section.footer__links-items ul li.title{
+    color: rgba(238, 238, 238, 0.945);
+    font-size: 20px;
+    
+}
+footer.footer section.footer__links-items ul li.item{
+    margin: 5px 50px;
+}
+footer.footer section.footer__links-items ul li.item a{
+    color: #eeeeee77;
+}
+footer.footer section.footer__links-items ul li.item a:hover{
+    border-bottom: 1px solid #eeeeee77;
+}
+
+footer.footer hr.hr{
+    width: 70%;
+    margin: 15px 0;
+}
+footer.footer p.copyright{
+    color: rgba(238, 238, 238, 0.644);
+}
+footer.footer p.copyright small{
+    color: rgba(238, 238, 238, 0.644);
+}
+
+
+
+
+
+/* 
+    - Laptop Navbar    
+*/
+@media screen and (max-width: 1100px){
+    header.navbar{
+        padding: 0 160px;
+    }
+
+    /* 
+        - Content
+    */
+    main.content table.content-posts tr td.card{
+        width: 400px;
+    }
+    main.content table.content-posts tr td.card img.card-image{
+        width: 400px;
+    }
+    
+}
+@media screen and (max-width: 870px){
+    header.navbar{
+        padding: 0 70px;
+    }
+
+    /* 
+        - Content
+    */
+    main.content table.content-posts tr td.card{
+        width: 300px;
+    }
+    main.content table.content-posts tr td.card img.card-image{
+        width: 300px;
+    }
+}
+
+/* 
+    - Mobile Navbar
+*/
+@media screen and (max-width: 690px){
+
+    
+
+
+    /* Desktop Navbar */
+    header.navbar{
+        padding: 0 20px;
+    }
+    header.navbar ul.navbar-items{
+        display: none;
+    }
+    header.navbar ul.navbar-login{
+        display: none;
+    }
+    
+    /* Кнопка меню */
+    header.navbar ul.navbar-menu{
+        display: block;
+    }
+    header.navbar ul.navbar-menu li img.menu:hover{
+        cursor: pointer;
+    }
+    
+    /* Mobile Navbar styles */
+    header.mobile__navbar{
+        position: absolute;
+        background: #222831;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Close button */
+    header.mobile__navbar ul.mobile__navbar-close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    header.mobile__navbar ul.mobile__navbar-close:hover{
+        cursor: pointer;
+    }
+
+    /* Логотип */
+    header.mobile__navbar ul.mobile__navbar-logo{
+        font-size: 33px;
+        text-transform: uppercase;
+    }
+    header.mobile__navbar ul.mobile__navbar-logo li{
+        color: #EEEEEE; 
+        font-weight: 600;
+    }
+    header.mobile__navbar ul.mobile__navbar-logo li span{
+        color: #00adb5;
+        font-weight: 600;
+    }
+
+    /* Навигация */
+    header.mobile__navbar ul.mobile__navbar-items{
+        text-align: center;
+        margin: 10px 0;
+    }
+    header.mobile__navbar ul.mobile__navbar-items li{
+        margin: 4px 0;
+    }
+    header.mobile__navbar ul.mobile__navbar-items li a.item{
+        color: #eee;
+        font-size: 26px;
+    }
+    header.mobile__navbar ul.mobile__navbar-items li a.item:hover{
+        border-bottom: 1px solid #eee;
+    }
+
+
+    /* Кнопка авторизаций */
+    header.mobile__navbar ul.mobile__navbar-login li a.login{
+        background: #00adb5;
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow: 0 3px 0 #00acb562;
+        padding: 4px 12px;
+    }
+    header.mobile__navbar ul.mobile__navbar-login li a.login:active{
+        margin: 3px 0 0 0;
+        box-shadow: none;
+    }
+    header.mobile__navbar ul.mobile__navbar-login li:active{
+        margin: 3px 0 0 0;
+    }
+
+
+
+
+    /* 
+        - Content
+    */
+    main.content table.content-posts tr{
+        display: flex;
+        flex-direction: column;
+    }
+    main.content table.content-posts tr td.card{
+        margin: 0 0 15px 0;
+    }
+
+
+
+
+
+
+    
+    /* 
+        - Footer
+    */
+    footer.footer{
+        height: 400px;
+    }
+    footer.footer section.footer__links-items{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
