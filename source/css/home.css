@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* 
+    - Reset 
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #393e46;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header.navbar ul.navbar-menu{
+    display: none;
+}
+header.mobile__navbar{
+    display: none;
+}
+
+
+/* 
+    - Desktop Navbar
+*/
+header.navbar {
+    background: #222831;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 280px;
+}
+
+/* Логотип */
+header.navbar ul.navbar-logo{
+    font-size: 28px;
+    text-transform: uppercase;
+}
+header.navbar ul.navbar-logo li{
+    color: #EEEEEE; 
+    font-weight: 600;
+}
+header.navbar ul.navbar-logo li span{
+    color: #00adb5;
+    font-weight: 600;
+}
+
+/* Навигация */
+header.navbar ul.navbar-items{
+    display: flex;
+}
+header.navbar ul.navbar-items li a.item{
+    color: #EEEEEE;
+    font-size: 20px;
+    margin: 0 8px;
+}
+header.navbar ul.navbar-items li a.item:hover{
+    border-bottom: 1px solid #EEEEEE;
+}
+
+/* Кнопка авторизаций */
+header.navbar ul.navbar-login li a.login{
+    background: #00adb5;
+    color: #eee;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #00acb562;
+    padding: 4px 12px;
+}
+header.navbar ul.navbar-login li a.login:active{
+    margin: 3px 0 0 0;
+    box-shadow: none;
+}
+header.navbar ul.navbar-login li:active{
+    margin: 3px 0 0 0;
+}
+
+
+
+
+/* 
+    - Laptop Navbar    
+*/
+@media screen and (max-width: 1100px){
+    header.navbar{
+        padding: 0 160px;
+    }
+    
+}
+@media screen and (max-width: 870px){
+    header.navbar{
+        padding: 0 70px;
+    }
+}
+
+
+
+
+
+
+/* 
+    - Mobile Navbar
+*/
+@media screen and (max-width: 690px){
+
+    
+
+
+    /* Desktop Navbar */
+    header.navbar{
+        padding: 0 20px;
+    }
+    header.navbar ul.navbar-items{
+        display: none;
+    }
+    header.navbar ul.navbar-login{
+        display: none;
+    }
+    
+    /* Кнопка меню */
+    header.navbar ul.navbar-menu{
+        display: block;
+    }
+    header.navbar ul.navbar-menu li img.menu:hover{
+        cursor: pointer;
+    }
+    
+    /* Mobile Navbar styles */
+    header.mobile__navbar{
+        position: absolute;
+        background: #222831;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Close button */
+    header.mobile__navbar ul.mobile__navbar-close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    header.mobile__navbar ul.mobile__navbar-close:hover{
+        cursor: pointer;
+    }
+
+    /* Логотип */
+    header.mobile__navbar ul.mobile__navbar-logo{
+        font-size: 33px;
+        text-transform: uppercase;
+    }
+    header.mobile__navbar ul.mobile__navbar-logo li{
+        color: #EEEEEE; 
+        font-weight: 600;
+    }
+    header.mobile__navbar ul.mobile__navbar-logo li span{
+        color: #00adb5;
+        font-weight: 600;
+    }
+
+    /* Навигация */
+    header.mobile__navbar ul.mobile__navbar-items{
+        text-align: center;
+        margin: 10px 0;
+    }
+    header.mobile__navbar ul.mobile__navbar-items li{
+        margin: 4px 0;
+    }
+    header.mobile__navbar ul.mobile__navbar-items li a.item{
+        color: #eee;
+        font-size: 26px;
+    }
+    header.mobile__navbar ul.mobile__navbar-items li a.item:hover{
+        border-bottom: 1px solid #eee;
+    }
+
+
+    /* Кнопка авторизаций */
+    header.mobile__navbar ul.mobile__navbar-login li a.login{
+        background: #00adb5;
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow: 0 3px 0 #00acb562;
+        padding: 4px 12px;
+    }
+    header.mobile__navbar ul.mobile__navbar-login li a.login:active{
+        margin: 3px 0 0 0;
+        box-shadow: none;
+    }
+    header.mobile__navbar ul.mobile__navbar-login li:active{
+        margin: 3px 0 0 0;
+    }
+
+
+
+}
